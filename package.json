@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "@inertiajs/react": "^1.2.0",
+        "primeicons": "^7.0.0",
         "primereact": "^10.8.3"
     }
 }
