@@ -23,6 +23,7 @@ export default function Index() {
                     isButton
                 />
             </div>
+
             <div className="w-full">
                 <ProductCard
                     isButtonReadMore
