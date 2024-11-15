@@ -1,3 +1,7 @@
+import { useTranslation } from "react-i18next";
+import { lang_menu } from "@/Constants/Variable";
+
+
 function ButtonReadMore({ icon, ...rest }) {
     return (
         <button
@@ -11,4 +15,30 @@ function ButtonReadMore({ icon, ...rest }) {
     );
 }
 
-export { ButtonReadMore };
+function ButtonLanguage() {
+    const { i18n } = useTranslation();
+
+    const changeLanguage = () => {
+        const newLanguage = i18n.language === "GB" ? "KH" : "GB";
+        i18n.changeLanguage(newLanguage);
+    };
+
+    return (
+        <button
+            onClick={changeLanguage}
+            className="flex flex-row justify-center items-center gap-2 p-2"
+        >
+            <div className="w-8 h-8 border p-1 rounded-full">
+                <img
+                    src={`https://flagsapi.com/${i18n.language.toUpperCase()}/flat/64.png`}
+                    alt={`Language: ${i18n.language}`}
+                />
+            </div>
+            <p className="text-white">
+                {lang_menu().find((lang) => i18n.language === lang.value).name}
+            </p>
+        </button>
+    );
+}
+
+export { ButtonReadMore, ButtonLanguage };

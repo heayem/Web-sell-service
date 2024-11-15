@@ -22,7 +22,9 @@
     },
     "dependencies": {
         "@inertiajs/react": "^1.2.0",
+        "i18next": "^23.16.5",
         "primeicons": "^7.0.0",
-        "primereact": "^10.8.3"
+        "primereact": "^10.8.3",
+        "react-i18next": "^15.1.1"
     }
 }
