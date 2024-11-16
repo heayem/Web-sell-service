@@ -2,6 +2,7 @@ import React from "react";
 import Menu from "./Menu";
 import { menu_items } from "@/Constants/Variable";
 import { ButtonLanguage } from "@/Components/Button/Button";
+import SearchFrontend from "@/Components/Search/searchFrontend";
 export default function Navigation() {
     return (
         <div className="w-screen flex flex-row justify-between items-center  bg-primary">
@@ -12,7 +13,8 @@ export default function Navigation() {
                     <Menu key={index} {...item} />
                 ))}
             </div>
-            <div className="w-32">
+            <div className="w-44 flex flex-row justify-center items-center">
+                <SearchFrontend />
                 <ButtonLanguage />
             </div>
         </div>
