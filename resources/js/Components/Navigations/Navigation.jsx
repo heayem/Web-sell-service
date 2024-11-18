@@ -11,7 +11,7 @@ export default function Navigation() {
 
     return (
         <>
-            <div className="w-full bg-primary p-2">
+            <div className="w-full bg-primary transition-colors supports-backdrop-blur:bg-primary/95 sticky top-0 z-40 backdrop-blur p-2">
                 {/* Mobile Menu Toggle Button */}
                 <button
                     onClick={() => setVisible(!visible)}
@@ -61,11 +61,7 @@ export default function Navigation() {
                 {/* Desktop Menu */}
                 <div className="hidden md:flex container flex-row justify-between items-center">
                     <div className="w-fit">
-                        <Image
-                            src="/images/logo.png"
-                            alt="logo"
-                            width="128"
-                        />
+                        <Image src="/images/logo.png" alt="logo" width="128" />
                     </div>
 
                     <div className="w-full flex flex-row justify-center items-center gap-6 p-4">
