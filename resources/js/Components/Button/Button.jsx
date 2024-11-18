@@ -26,7 +26,7 @@ function ButtonLanguage() {
     return (
         <button
             onClick={changeLanguage}
-            className="flex flex-row justify-center items-center gap-2 p-2"
+            className="flex flex-row md:justify-center items-center gap-2 md:p-2"
         >
             <div className="w-8 h-8 border p-1 rounded-full">
                 <img

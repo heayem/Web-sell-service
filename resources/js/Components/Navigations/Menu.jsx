@@ -7,9 +7,10 @@ export default function Menu(props) {
         <Link
             href={href}
             rest
-            className="text-white py-1 px-2 md:py-1.5 md:px-2.5"
+            className="w-fit text-white py-1 px-2 md:py-1.5 md:px-2.5 group relative"
         >
             <p> {name}</p>
+            <span className="absolute left-0 bottom-0 mb-0 flex h-1 w-0 translate-x-0 transform bg-blue-400 opacity-90 transition-all duration-300 ease-out group-hover:w-full"></span>
         </Link>
     );
 }
