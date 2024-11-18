@@ -59,13 +59,12 @@ export default function Navigation() {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex w-full flex-row justify-between items-center bg-primary">
-                    <div className="w-32">
+                <div className="hidden md:flex container flex-row justify-between items-center">
+                    <div className="w-fit">
                         <Image
                             src="/images/logo.png"
                             alt="logo"
-                            width="100%"
-                            height="100%"
+                            width="128"
                         />
                     </div>
 
@@ -75,7 +74,7 @@ export default function Navigation() {
                         ))}
                     </div>
 
-                    <div className="w-44 flex flex-row justify-center items-center">
+                    <div className="w-fit flex flex-row justify-center items-center">
                         <SearchFrontend />
                         <ButtonLanguage />
                     </div>

@@ -1,11 +1,10 @@
 import React from "react";
 import Layout from "@/Components/Layout/public/Layout";
-import {HeroWithContent} from "@/Components/Hero/HeroSection";
+import { HeroWithContent } from "@/Components/Hero/HeroSection";
+import Footer from "@/Components/Footer/footer";
 import {
     ProductCardImageLeft,
-    ProductCardImageLeftHasReadMore,
     ProductCardImageRight,
-    ProductCardImageRightHasReadMore,
 } from "@/Components/Cards/ProductCard";
 
 export default function HomeScreen() {
@@ -14,39 +13,38 @@ export default function HomeScreen() {
             <Layout
                 heroSection={
                     <HeroWithContent
-                        image="./images/image-one.jpg"
+                        image="./images/bg-homepage.png"
                         title="WELCOME TO SERVICEBOX"
                         description="At SERVICEBOX, we provide a seamless platform for businesses to purchase the products they need to thrive. Whether you're looking for essential tools, equipment, or specialized solutions for your company, we are here to make the process easy and efficient."
-                        isButton
                         buttonLabel="Get Started"
                         url="#"
                     />
                 }
                 content={
-                    <>
-                        <ProductCardImageLeftHasReadMore
-                            image={"./images/image-one.jpg"}
-                            title="Product 1"
-                            description="Description for Product 1"
-                        />
-                        <ProductCardImageRightHasReadMore
-                            image={"./images/image-one.jpg"}
-                            title="Product 1"
-                            description="Description for Product 1"
-                        />
+                    <div className="container flex flex-col gap-4 md:gap-6">
                         <ProductCardImageLeft
-                            image={"./images/image-one.jpg"}
-                            title="Product 1"
-                            description="Description for Product 1"
+                            image={"./images/hight-quality.png"}
+                            title="High-Quality"
+                            description="We only stock products from reputable brands, ensuring that you get top-quality, reliable technology for your business."
                         />
                         <ProductCardImageRight
-                            image={"./images/image-one.jpg"}
-                            title="Product 1"
-                            description="Description for Product 1"
+                            image={"./images/user-friendly.png"}
+                            title="User-Friendly"
+                            description="SERVICEBOX is designed for a seamless experience, allowing you to quickly browse, compare, and purchase the tech products or website services that meet your needs."
                         />
+                        <ProductCardImageLeft
+                            image={"./images/specialized-in-technology.png"}
+                            title="Specialized in Technology"
+                            description="SERVICEBOX offers a wide range of cutting-edge technology products and professional website services to help your business stay ahead in a digital world."
+                        />
+                       
+                    </div>
+                }
+                footer={
+                    <>
+                        <Footer />
                     </>
                 }
-                footer={<></>}
             />
         </>
     );
