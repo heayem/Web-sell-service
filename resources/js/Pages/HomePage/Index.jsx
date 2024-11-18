@@ -1,10 +1,10 @@
 import React from "react";
-import Layout from "@/Components/Layout/public/Layout";
+import HomeScreen from "./Homescreen";
 
 export default function Index() {
     return (
         <>
-            <Layout />
+            <HomeScreen />
         </>
     );
 }

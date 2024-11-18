@@ -11,7 +11,7 @@ export default function Navigation() {
 
     return (
         <>
-            <div className="w-screen bg-primary p-2">
+            <div className="w-full bg-primary p-2">
                 {/* Mobile Menu Toggle Button */}
                 <button
                     onClick={() => setVisible(!visible)}
