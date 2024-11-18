@@ -1,7 +1,14 @@
 import React from "react";
 
-export default function HeroSection(props) {
-    const { image, title, description, isButton = false, url = '#', buttonLabel } = props;
+function HeroWithContent(props) {
+    const {
+        image,
+        title,
+        description,
+        isButton = false,
+        url = "#",
+        buttonLabel,
+    } = props;
 
     return (
         <div className="w-full h-screen flex flex-col md:flex-row relative">
@@ -31,3 +38,45 @@ export default function HeroSection(props) {
         </div>
     );
 }
+
+function HeroWithDescription(props) {
+    const {
+        image,
+        description,
+    } = props;
+
+    return (
+        <div className="w-full h-screen flex flex-col md:flex-row relative">
+            <div className="flex-1 flex flex-col justify-center p-8 md:p-16 text-left md:text-left">
+                <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 max-sm:text-sm max-md:text-4xl lg:text-3xl">
+                    {description}
+                </p>
+            </div>
+            <div className="flex-1 flex items-center justify-center">
+                <img
+                    src={image}
+                    alt="Hero background"
+                    className="w-full md:w-3/4 h-auto rounded-md object-cover"
+                />
+            </div>
+        </div>
+    );
+}
+
+function HeroWithoutContent(props) {
+    const {
+        image,
+    } = props;
+
+    return (
+        <div className="w-full md:h-screen relative">
+            <img
+                src={image}
+                alt="Hero background"
+                className="w-full md:h-screen object-cover"
+            />
+        </div>
+    );
+}
+
+export { HeroWithContent, HeroWithDescription, HeroWithoutContent };
