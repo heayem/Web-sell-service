@@ -1,6 +1,12 @@
 import React from "react";
 import Layout from "@/Components/Layout/public/Layout";
-import {HeroWithContent, HeroWithDescription, HeroWithoutContent} from "@/Components/Hero/HeroSection";
+import {HeroWithContent} from "@/Components/Hero/HeroSection";
+import {
+    ProductCardImageLeft,
+    ProductCardImageLeftHasReadMore,
+    ProductCardImageRight,
+    ProductCardImageRightHasReadMore,
+} from "@/Components/Cards/ProductCard";
 
 export default function HomeScreen() {
     return (
@@ -16,6 +22,31 @@ export default function HomeScreen() {
                         url="#"
                     />
                 }
+                content={
+                    <>
+                        <ProductCardImageLeftHasReadMore
+                            image={"./images/image-one.jpg"}
+                            title="Product 1"
+                            description="Description for Product 1"
+                        />
+                        <ProductCardImageRightHasReadMore
+                            image={"./images/image-one.jpg"}
+                            title="Product 1"
+                            description="Description for Product 1"
+                        />
+                        <ProductCardImageLeft
+                            image={"./images/image-one.jpg"}
+                            title="Product 1"
+                            description="Description for Product 1"
+                        />
+                        <ProductCardImageRight
+                            image={"./images/image-one.jpg"}
+                            title="Product 1"
+                            description="Description for Product 1"
+                        />
+                    </>
+                }
+                footer={<></>}
             />
         </>
     );
