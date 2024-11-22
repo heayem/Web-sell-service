@@ -4,7 +4,7 @@ import { ButtonReadMore } from "../Button/Button";
 
 function ProductCardImageLeftHasReadMore({ image, title, description }) {
     return (
-        <div className="w-full flex justify-between max-sm:flex-col md:flex-row gap-4 md:gap-6 p-4 bg-[#EEEEEE] rounded-lg">
+        <div className="w-full flex justify-between max-sm:flex-col md:flex-row gap-4 md:gap-6 py-8 my-8 bg-[#EEEEEE] rounded-lg">
             <div className=" md:w-1/2  flex flex-row items-center justify-center">
                 <Image
                     className="w-full rounded-md"
@@ -25,7 +25,7 @@ function ProductCardImageLeftHasReadMore({ image, title, description }) {
 
 function ProductCardImageRightHasReadMore({ image, title, description }) {
     return (
-        <div className="w-full flex justify-between max-sm:flex-col md:flex-row gap-4 md:gap-6 p-4 bg-[#EEEEEE] rounded-lg">
+        <div className="w-full flex justify-between max-sm:flex-col-reverse md:flex-row gap-4 md:gap-6 py-8 my-8 bg-[#EEEEEE] rounded-lg">
             <div className="md:w-1/2 flex flex-col gap-2 md:gap-4 justify-center">
                 <h5 className="text-3xl font-bold text-gray-900">{title}</h5>
                 <p className=" text-gray-700 text-2xl whitespace-pre-wrap">
@@ -46,7 +46,7 @@ function ProductCardImageRightHasReadMore({ image, title, description }) {
 
 function ProductCardImageLeft({ image, title, description }) {
     return (
-        <div className="w-full flex justify-between max-sm:flex-col md:flex-row gap-4 md:gap-6 p-4 rounded-lg">
+        <div className="w-full flex justify-between max-sm:flex-col md:flex-row gap-4 md:gap-6 py-8 my-8 rounded-lg">
             <div className=" md:w-1/2  flex flex-row items-center justify-center">
                 <Image
                     className="w-full rounded-md"
@@ -66,7 +66,7 @@ function ProductCardImageLeft({ image, title, description }) {
 
 function ProductCardImageRight({ image, title, description }) {
     return (
-        <div className="w-full flex justify-between max-sm:flex-col md:flex-row gap-4 md:gap-6 p-4  rounded-lg">
+        <div className="w-full flex justify-between max-sm:flex-col-reverse md:flex-row gap-4 md:gap-6 py-8 my-8  rounded-lg">
             <div className="md:w-1/2 flex flex-col gap-2 md:gap-4 justify-center">
                 <h5 className="text-3xl font-bold text-gray-900">{title}</h5>
                 <p className=" text-gray-700 text-2xl whitespace-pre-wrap">
@@ -84,4 +84,9 @@ function ProductCardImageRight({ image, title, description }) {
     );
 }
 
-export { ProductCardImageLeftHasReadMore, ProductCardImageRightHasReadMore, ProductCardImageLeft, ProductCardImageRight };
+export {
+    ProductCardImageLeftHasReadMore,
+    ProductCardImageRightHasReadMore,
+    ProductCardImageLeft,
+    ProductCardImageRight,
+};

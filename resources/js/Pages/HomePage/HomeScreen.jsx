@@ -6,6 +6,7 @@ import {
     ProductCardImageLeft,
     ProductCardImageRight,
 } from "@/Components/Cards/ProductCard";
+import OurFeature from "@/Components/Slide/OurFeature";
 
 export default function HomeScreen() {
     return (
@@ -22,6 +23,7 @@ export default function HomeScreen() {
                 }
                 content={
                     <div className="container flex flex-col gap-4 md:gap-6">
+                        <OurFeature />
                         <ProductCardImageLeft
                             image={"./images/hight-quality.png"}
                             title="High-Quality"
@@ -37,7 +39,6 @@ export default function HomeScreen() {
                             title="Specialized in Technology"
                             description="SERVICEBOX offers a wide range of cutting-edge technology products and professional website services to help your business stay ahead in a digital world."
                         />
-                       
                     </div>
                 }
                 footer={
