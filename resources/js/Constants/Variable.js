@@ -4,9 +4,9 @@ const menu_items = () => {
     const { t } = useTranslation();
     return [
         { name: t("nav_menu.home"), href: "/" },
-        { name: t("nav_menu.feature"), href: "/" },
-        { name: t("nav_menu.aboutUs"), href: "/" },
-        { name: t("nav_menu.contactUs"), href: "/" },
+        { name: t("nav_menu.feature"), href: "/feature" },
+        { name: t("nav_menu.aboutUs"), href: "/about" },
+        { name: t("nav_menu.contactUs"), href: "/contact" },
     ];
 };
 

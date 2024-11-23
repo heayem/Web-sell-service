@@ -22,9 +22,10 @@ export default function HomeScreen() {
                     />
                 }
                 content={
-                    <div className="container flex flex-col gap-4 md:gap-6">
+                    <div className="container flex flex-col gap-8 md:gap-16 my-8">
                         <OurFeature />
                         <ProductCardImageLeft
+                            heading="Why Choose Us?"
                             image={"./images/hight-quality.png"}
                             title="High-Quality"
                             description="We only stock products from reputable brands, ensuring that you get top-quality, reliable technology for your business."

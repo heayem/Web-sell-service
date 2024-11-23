@@ -38,13 +38,13 @@ function OurFeature() {
         <>
             <div className="w-full mx-auto text-center py-8 my-8 relative">
                 <div className="w-32 opacity-90 mx-auto absolute -translate-x-1/2 -translate-y-1/2 top-0 left-1/2"></div>
-                <h1
+                <h2
                     className={
                         "font-bold uppercase text-2xl text-blue-800 dark:text-blue-600"
                     }
                 >
                     Our Feature
-                </h1>
+                </h2>
             </div>
             <div className={"max-w-xl mx-auto"}>
                 <Swiper
