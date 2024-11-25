@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "@/Components/Layout/public/Layout";
 import HeroSection from "@/Components/Hero/HeroSection";
-
+import Footer from "@/Components/Footer/Footer";
 export default function HomeScreen() {
     return (
         <>
@@ -16,6 +16,7 @@ export default function HomeScreen() {
                         url="#"
                     />
                 }
+                footer={<Footer />}
             />
         </>
     );
