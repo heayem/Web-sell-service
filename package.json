@@ -25,6 +25,7 @@
         "i18next": "^23.16.5",
         "primeicons": "^7.0.0",
         "primereact": "^10.8.3",
-        "react-i18next": "^15.1.1"
+        "react-i18next": "^15.1.1",
+        "swiper": "^11.1.15"
     }
 }
