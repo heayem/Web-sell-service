@@ -52,14 +52,15 @@ function HeroWithDescription(props) {
 }
 
 function HeroWithoutContent(props) {
-    const { image } = props;
+    const { image, ...rest } = props;
 
     return (
         <div className="w-full h-[80vh] md:h-[85vh] lg:h-[88vh] relative">
             <img
+                className=" object-cover"
                 src={image}
+                {...rest}
                 alt="Hero background"
-                className="w-full h-[80vh] md:h-[85vh] lg:h-[88vh] object-cover"
             />
         </div>
     );

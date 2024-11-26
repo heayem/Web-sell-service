@@ -12,7 +12,7 @@ export default function FeatureScreen() {
         <>
             <Layout
                 heroSection={
-                    <HeroWithoutContent image="./images/bg-featurepage.png" />
+                    <HeroWithoutContent className="w-full h-[80vh] md:h-[85vh] lg:h-[88vh]" image="./images/bg-featurepage.png" />
                 }
                 content={
                     <div className="container flex flex-col gap-8 md:gap-16 my-8 md:my-16">
