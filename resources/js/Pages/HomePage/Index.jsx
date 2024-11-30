@@ -6,9 +6,9 @@ import Signup from "@/Components/Signup";
 export default function Index() {
     return (
         <>
-            {/* <HomeScreen /> */}
+            <HomeScreen />
             {/* <Login/> */}
-            <Signup/>
+            {/* <Signup/> */}
         </>
     );
 }
