@@ -5,7 +5,7 @@ const menu_items = () => {
     return [
         { name: t("nav_menu.home"), href: "/" },
         { name: t("nav_menu.feature"), href: "/feature" },
-        { name: t("nav_menu.aboutUs"), href: "/about" },
+        { name: t("nav_menu.aboutUs"), href: "/about-us" },
         { name: t("nav_menu.contactUs"), href: "/contact" },
     ];
 };

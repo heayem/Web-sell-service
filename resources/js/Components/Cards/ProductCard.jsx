@@ -1,6 +1,8 @@
 import { Image } from "primereact/image";
 import React from "react";
 import { ButtonReadMore } from "../Button/Button";
+import { Head } from "@inertiajs/react";
+import { Heading } from "../Typography/Heading";
 
 function ProductCardImageLeftHasReadMore({
     image,
@@ -13,13 +15,7 @@ function ProductCardImageLeftHasReadMore({
             <div className="w-full mx-auto text-center  relative">
                 {heading && (
                     <div class="p-4 md:p-8">
-                        <h2
-                            className={
-                                "font-bold uppercase text-2xl text-blue-800"
-                            }
-                        >
-                            {heading}
-                        </h2>
+                        <Heading title={heading} />
                     </div>
                 )}
                 <div className="w-full flex justify-between max-sm:flex-col md:flex-row gap-4 md:gap-6 px-8 p-4 bg-[#EEEEEE] rounded-lg">

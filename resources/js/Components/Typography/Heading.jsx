@@ -1,30 +1,26 @@
-import React from 'react';
+import React from "react";
 
-// Heading component 
-function Heading({ icon, heading, position, ...rest }) {
-
-  return (
-    <div {...rest} className={`flex items-center font-bold `}>
-       {iconLeft}
-      <h2>{heading}</h2>
-      {iconRight}
-    </div>
-  );
+// Heading component
+function Heading({ iconLeft, iconRight, title, position, ...rest }) {
+    return (
+        <div {...rest} className={`flex items-center`}>
+            {iconLeft}
+            <h2 className="font-bold uppercase text-2xl text-blue-800">
+                {title}
+            </h2>
+            {iconRight}
+        </div>
+    );
 }
 
-// Subheading component 
-function Subheading({ icon, subheading, position, ...rest }) {
-
-  return (
-    <div {...rest} className={`flex items-center `}>
-      {iconLeft}
-      <h3>
-        {subheading}
-      </h3>
-      {iconRight}
-    </div>
-  );
+// Subheading component
+function Subheading({ iconLeft, iconRight, subheading, position, ...rest }) {
+    return (
+        <div {...rest} className={`flex items-center`}>
+            {iconLeft}
+            <h3>{subheading}</h3>
+            {iconRight}
+        </div>
+    );
 }
 export { Heading, Subheading };
-
-

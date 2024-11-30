@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\Clients\FeatureController;
 use App\Http\Controllers\Clients\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.page');
 Route::get('/feature', [FeatureController::class, 'index'])->name('feature.page');
+Route::get('/about-us', [AboutUsController::class, 'index'])->name('about.us.page');
 
 
 require __DIR__ . '/auth.php';
