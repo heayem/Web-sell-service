@@ -3,9 +3,9 @@ import React from "react";
 // Heading component
 function Heading({ iconLeft, iconRight, title, position, ...rest }) {
     return (
-        <div {...rest} className={`flex items-center`}>
+        <div {...rest} className={`w-fit flex justify-start items-center`}>
             {iconLeft}
-            <h2 className="font-bold uppercase text-2xl text-blue-800">
+            <h2 className="font-bold uppercase text-center text-2xl text-blue-800">
                 {title}
             </h2>
             {iconRight}

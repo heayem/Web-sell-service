@@ -55,7 +55,7 @@ function HeroWithoutContent(props) {
     const { image, ...rest } = props;
 
     return (
-        <div className="w-full h-[80vh] md:h-[85vh] lg:h-[88vh] relative">
+        <div className="w-full h-[50vh] md:h-[85vh] lg:h-[88vh] relative">
             <img
                 className=" object-cover"
                 src={image}

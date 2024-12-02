@@ -7,7 +7,7 @@ import {
     ProductCardImageRightHasReadMore,
 } from "@/Components/Cards/ProductCard";
 
-export default function FeatureScreen() {
+export default function ServiceScreen() {
     return (
         <>
             <Layout

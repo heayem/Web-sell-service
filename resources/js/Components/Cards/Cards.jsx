@@ -4,7 +4,7 @@ import "primeicons/primeicons.css";
 const Cards = ({ icon, title, desc, hoverColor }) => {
     return (
         <div
-            className={`bg-white shadow-lg rounded-lg p-8 flex flex-col items-start transition-all duration-300 ${hoverColor} hover:text-white`}
+            className={`bg-white border border-gray-100 rounded-md shadow-md p-8 flex flex-col items-start transition-all duration-300 ${hoverColor}`}
         >
             <div className="flex items-center justify-between w-full mb-4">
                 {icon}

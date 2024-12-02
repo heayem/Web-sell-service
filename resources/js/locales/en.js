@@ -2,8 +2,8 @@ export default {
     translation: {
       nav_menu:{
         home:"Home",
-        feature:"Feature",
-        aboutUs:"About Us",
+        service:"Service",
+        aboutUs:"About",
         contactUs:"Contact Us"
       },
       label:{

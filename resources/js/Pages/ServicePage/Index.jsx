@@ -1,10 +1,10 @@
 import React from "react";
-import FeatureScreen from "./FeatureScreen";
+import ServiceScreen from "./ServiceScreen";
 
 export default function Index() {
     return (
         <>
-            <FeatureScreen />
+            <ServiceScreen />
         </>
     );
 }

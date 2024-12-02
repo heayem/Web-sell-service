@@ -7,6 +7,7 @@ import {
     ProductCardImageRight,
 } from "@/Components/Cards/ProductCard";
 import OurFeature from "@/Components/Slide/OurFeature";
+import ContactUs from "./ContactUs";
 
 export default function HomeScreen() {
     return (
@@ -40,6 +41,7 @@ export default function HomeScreen() {
                             title="Specialized in Technology"
                             description="SERVICEBOX offers a wide range of cutting-edge technology products and professional website services to help your business stay ahead in a digital world."
                         />
+                        <ContactUs />
                     </div>
                 }
                 footer={

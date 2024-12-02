@@ -12,9 +12,9 @@ function ProductCardImageLeftHasReadMore({
 }) {
     return (
         <>
-            <div className="w-full mx-auto text-center  relative">
+            <div className="w-full mx-auto   relative">
                 {heading && (
-                    <div class="p-4 md:p-8">
+                    <div className="w-full flex justify-center text-center p-4 md:p-8">
                         <Heading title={heading} />
                     </div>
                 )}

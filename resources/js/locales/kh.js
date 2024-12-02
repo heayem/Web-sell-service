@@ -2,7 +2,7 @@ export default {
     translation: {
         nav_menu:{
         home:"ទំព័រដើម",
-        feature:"លក្ខណៈ",
+        service:"សេវាកម្ម",
         aboutUs:"អំពីពួកយើង",
         contactUs:"ទំនាក់ទំនងយើង"
       },
