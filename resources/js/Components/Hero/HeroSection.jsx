@@ -14,7 +14,7 @@ function HeroWithContent(props) {
                 </p>
                 <a
                     href={url}
-                    className="relative w-fit flex justify-center border px-5 py-3 mr-3 rounded-lg font-medium gap-2 items-center text-sm md:text-md lg:text-lg bg-orange-400 text-center text-white hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 dark:focus:ring-orange-900 group overflow-hidden"
+                    className="relative w-fit flex justify-center border px-5 py-3 mr-3 rounded-lg font-medium gap-2 items-center text-sm md:text-md lg:text-lg bg-primary text-center text-white hover:bg-blue-500 focus:ring-4 focus:ring-blue-300 dark:focus:ring-orange-900 group overflow-hidden"
                 >
                     {buttonLabel}
                 </a>

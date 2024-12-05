@@ -19,7 +19,7 @@ export default function HomeScreen() {
                         title="WELCOME TO SERVICEBOX"
                         description="At SERVICEBOX, we provide a seamless platform for businesses to purchase the products they need to thrive. Whether you're looking for essential tools, equipment, or specialized solutions for your company, we are here to make the process easy and efficient."
                         buttonLabel="Get Started"
-                        url="#"
+                        url="#contact"
                     />
                 }
                 content={
@@ -41,6 +41,7 @@ export default function HomeScreen() {
                             title="Specialized in Technology"
                             description="SERVICEBOX offers a wide range of cutting-edge technology products and professional website services to help your business stay ahead in a digital world."
                         />
+
                         <ContactUs />
                     </div>
                 }

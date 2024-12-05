@@ -1,6 +1,7 @@
 import AddressCard from "@/Components/Cards/AddressCard";
 import InputFloatLabel from "@/Components/Forms/Inputs/FloatLabel";
 import TextAreaFloatLabel from "@/Components/Forms/TextArea/FloatLabel";
+import { Heading } from "@/Components/Typography/Heading";
 import React, { useState } from "react";
 
 export default function ContactUs() {
@@ -60,9 +61,8 @@ export default function ContactUs() {
             id="contact"
             className="w-full flex flex-col justify-center items-center gap-4 md:gap-6 lg:gap-8 py-4 md:py-6 lg:py-8"
         >
-            <h2 className="w-full text-center p-4 md:p-6 lg:p-8 text-gray-600">
-                Contact Us
-            </h2>
+            <Heading title="Contact" />
+           
 
             <div className="w-full flex flex-col justify-center">
                 <div className="w-full flex flex-row justify-between items-center max-sm:flex-col max-sm:gap-6">
