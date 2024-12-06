@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { lang_menu } from "@/Constants/Variable";
 
-
 function ButtonReadMore({ icon, ...rest }) {
     return (
         <button
@@ -21,6 +20,7 @@ function ButtonLanguage() {
     const changeLanguage = () => {
         const newLanguage = i18n.language === "GB" ? "KH" : "GB";
         i18n.changeLanguage(newLanguage);
+        document.body.className = newLanguage === "GB" ? "lang-en" : "lang-kh";
     };
 
     return (
