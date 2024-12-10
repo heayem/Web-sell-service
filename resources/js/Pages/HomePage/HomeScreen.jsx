@@ -8,17 +8,21 @@ import {
 } from "@/Components/Cards/ProductCard";
 import OurFeature from "@/Components/Slide/OurFeature";
 import ContactUs from "./ContactUs";
+import { useTranslation } from "react-i18next";
+
+
 
 export default function HomeScreen() {
+    const { t } = useTranslation();
     return (
         <>
             <Layout
                 heroSection={
                     <HeroWithContent
                         image="./images/bg-homepage.png"
-                        title="WELCOME TO SERVICEBOX"
-                        description="At SERVICEBOX, we provide a seamless platform for businesses to purchase the products they need to thrive. Whether you're looking for essential tools, equipment, or specialized solutions for your company, we are here to make the process easy and efficient."
-                        buttonLabel="Get Started"
+                        title={t("hero_section.title")}
+                        description={t("hero_section.description")}
+                        buttonLabel={t("hero_section.button")}
                         url="#contact"
                     />
                 }
@@ -26,20 +30,20 @@ export default function HomeScreen() {
                     <div className="container flex flex-col gap-8 md:gap-16 my-8">
                         <OurFeature />
                         <ProductCardImageLeft
-                            heading="Why Choose Us?"
+                            heading={t("why_us.header")}
                             image={"./images/hight-quality.png"}
-                            title="High-Quality"
-                            description="We only stock products from reputable brands, ensuring that you get top-quality, reliable technology for your business."
+                            title={t("why_us.specialized.title")}
+                            description={t("why_us.specialized.description")}
                         />
                         <ProductCardImageRight
                             image={"./images/user-friendly.png"}
-                            title="User-Friendly"
-                            description="SERVICEBOX is designed for a seamless experience, allowing you to quickly browse, compare, and purchase the tech products or website services that meet your needs."
+                            title={t("why_us.high_quality.title")}
+                            description={t("why_us.high_quality.description")}
                         />
                         <ProductCardImageLeft
                             image={"./images/specialized-in-technology.png"}
-                            title="Specialized in Technology"
-                            description="SERVICEBOX offers a wide range of cutting-edge technology products and professional website services to help your business stay ahead in a digital world."
+                            title={t("why_us.user_friendly.title")}
+                            description={t("why_us.user_friendly.description")}
                         />
 
                         <ContactUs />

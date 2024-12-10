@@ -6,7 +6,7 @@ function HeroWithContent(props) {
     return (
         <div className="container h-[80vh] md:h-[85vh] lg:h-[88vh] flex  flex-col md:flex-row relative">
             <div className="flex-1 flex flex-col justify-center text-left md:text-left">
-                <h1 className="max-w-2xl mb-4 text-2xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+                <h1 className="max-w-2xl mb-4 text-2xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white">
                     {title}
                 </h1>
                 <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 max-sm:text-sm max-md:text-4xl lg:text-3xl">
