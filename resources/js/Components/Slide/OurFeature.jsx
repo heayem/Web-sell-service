@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Autoplay, EffectCards, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useTranslation } from "react-i18next";
 
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -8,6 +9,9 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
 function OurFeature() {
+
+    const { t } = useTranslation();
+
     const swiperRef = useRef();
     const [active, setActive] = useState(0);
 
@@ -43,7 +47,7 @@ function OurFeature() {
                         "font-bold uppercase text-2xl text-blue-800 dark:text-blue-600"
                     }
                 >
-                    Our Feature
+                    {t('feature.header')}
                 </h2>
             </div>
             <div className={"max-w-xl mx-auto"}>
@@ -63,7 +67,7 @@ function OurFeature() {
                     onSlideChange={(swiper) => {
                         setActive(swiper.activeIndex);
                     }}
-                   
+
                 >
                     {images.map((img, i) => {
                         return (
