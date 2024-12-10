@@ -3,8 +3,10 @@ import InputFloatLabel from "@/Components/Forms/Inputs/FloatLabel";
 import TextAreaFloatLabel from "@/Components/Forms/TextArea/FloatLabel";
 import { Heading } from "@/Components/Typography/Heading";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ContactUs() {
+    const { t } = useTranslation();
     const [form, setForm] = useState({
         firstName: "",
         lastName: "",
@@ -27,9 +29,8 @@ export default function ContactUs() {
         e.preventDefault();
         setLoading(true);
 
-        // Simulate a form submission process
         setTimeout(() => {
-            alert("Message sent successfully!");
+            alert(t("contact.form.success_message"));
             setLoading(false);
         }, 2000);
     };
@@ -42,17 +43,17 @@ export default function ContactUs() {
                     style={{ fontSize: "24px" }}
                 ></i>
             ),
-            description: "Rupp, Phnom Penh, Cambodia",
+            description: t("contact.address"),
         },
         {
             icon: (
                 <i className="pi pi-envelope" style={{ fontSize: "24px" }}></i>
             ),
-            description: "1qUeh@example.com",
+            description: "info@servicetech.com",
         },
         {
             icon: <i className="pi pi-phone" style={{ fontSize: "24px" }}></i>,
-            description: "+855 96 26 35 945",
+            description: "+855 96 263 5945",
         },
     ];
 
@@ -61,8 +62,8 @@ export default function ContactUs() {
             id="contact"
             className="w-full flex flex-col justify-center items-center gap-4 md:gap-6 lg:gap-8 py-4 md:py-6 lg:py-8"
         >
-            <Heading title="Contact" />
-           
+            <Heading title={t("contact.header")} />
+
 
             <div className="w-full flex flex-col justify-center">
                 <div className="w-full flex flex-row justify-between items-center max-sm:flex-col max-sm:gap-6">
@@ -93,26 +94,26 @@ export default function ContactUs() {
                         <div className="w-full grid grid-cols-2 gap-6">
                             <InputFloatLabel
                                 htmlFor="firstName"
-                                label="First Name"
+                                label={t("contact.form.first_name")}
                                 value={form.firstName}
                                 onChange={handleChange}
                             />
                             <InputFloatLabel
                                 htmlFor="lastName"
-                                label="Last Name"
+                                label={t("contact.form.last_name")}
                                 value={form.lastName}
                                 onChange={handleChange}
                             />
                             <InputFloatLabel
                                 htmlFor="email"
-                                label="Email"
+                                label={t("contact.form.email")}
                                 value={form.email}
                                 onChange={handleChange}
                             />
 
                             <InputFloatLabel
                                 htmlFor="phoneNumber"
-                                label="Phone Number"
+                                label={t("contact.form.phone")}
                                 value={form.phoneNumber}
                                 onChange={handleChange}
                             />
@@ -120,7 +121,7 @@ export default function ContactUs() {
 
                         <TextAreaFloatLabel
                             htmlFor="message"
-                            label="Message"
+                            label={t("contact.form.message")}
                             value={form.message}
                             onChange={handleChange}
                         />
@@ -134,7 +135,7 @@ export default function ContactUs() {
                                         : "bg-primary text-white"
                                 }`}
                             >
-                                {loading ? "Sending..." : "Send Message"}
+                                {loading ? t("contact.form.sending") : t("contact.form.send_message")}
                             </button>
                         </div>
                     </div>
