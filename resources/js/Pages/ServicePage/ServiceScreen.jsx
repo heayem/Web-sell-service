@@ -6,8 +6,10 @@ import {
     ProductCardImageLeftHasReadMore,
     ProductCardImageRightHasReadMore,
 } from "@/Components/Cards/ProductCard";
+import { useTranslation } from "react-i18next";
 
 export default function ServiceScreen() {
+    const { t } = useTranslation();
     return (
         <>
             <Layout
@@ -17,30 +19,25 @@ export default function ServiceScreen() {
                 content={
                     <div className="container flex flex-col gap-8 md:gap-16 my-8 md:my-16">
                         <ProductCardImageLeftHasReadMore
-                            heading="OUR SERVICE"
+                            heading={t("our_products.header")}
                             image={"./images/hight-quality.png"}
-                            title="EDUCATION"
-                            description="We provide cutting-edge educational platforms designed to foster learning and development. Our solutions range from e-learning systems to tools that enhance both online and classroom experiences, making education more accessible and engaging."
+                            title={t("our_products.education_platform.header")}
+                            description={t("our_products.education_platform.description")}
                         />
                         <ProductCardImageRightHasReadMore
                             image={"./images/user-friendly.png"}
-                            title="E-COMMERCE"
-                            description="Our e-commerce solutions are built to streamline online transactions and shopping experiences for businesses of all sizes. From intuitive user interfaces to secure payment gateways, we help companies grow their online presence and sales."
+                            title={t("our_products.e_commerce_solution.header")}
+                            description={t("our_products.e_commerce_solution.description")}
                         />
                         <ProductCardImageLeftHasReadMore
                             image={"./images/specialized-in-technology.png"}
-                            title="SYSTEM DELIVERY"
-                            description="Our system delivery services ensure seamless implementation of custom software and infrastructure tailored to meet the specific needs of your business. We handle every stage of the process—from "
+                            title={t("our_products.hospital_management.header")}
+                            description={t("our_products.hospital_management.description")}
                         />
                         <ProductCardImageRightHasReadMore
                             image={"./images/user-friendly.png"}
-                            title="HOSPITAL SYSTEM"
-                            description="We specialize in developing hospital management systems that simplify and automate hospital operations, patient records, and appointments. Our solutions help healthcare providers improve efficiency and provide better care to patients."
-                        />
-                        <ProductCardImageLeftHasReadMore
-                            image={"./images/specialized-in-technology.png"}
-                            title="ILLNESS  SYSTEM"
-                            description="Our illness management systems are designed to assist patients and healthcare providers in tracking and managing chronic conditions. These systems provide tools for monitoring symptoms, medication schedules, and health progress, helping to enhance the quality of care."
+                            title={t("our_products.illness_tracker.header")}
+                            description={t("our_products.illness_tracker.description")}
                         />
                     </div>
                 }

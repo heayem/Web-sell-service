@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+    const { t } = useTranslation();
     return (
         <footer className="bg-primary text-white py-6 md:py-8">
             <div className="container mx-auto">
@@ -20,48 +22,87 @@ const Footer = () => {
                     </div>
 
                     <div className="w-full md:w-1/4">
-                        <h5 className="font-semibold mb-2">Feature</h5>
+                        <h5 className="font-semibold mb-2">
+                            {t("footer.products")}
+                        </h5>
                         <ul>
                             <li>
                                 <a href="#" className="hover:underline">
-                                    Products
+                                    {t(
+                                        "our_products.education_platform.header"
+                                    )}
                                 </a>
                             </li>
                             <li>
                                 <a href="#" className="hover:underline">
-                                    Quality
+                                    {t(
+                                        "our_products.e_commerce_solution.header"
+                                    )}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="hover:underline">
+                                    {t(
+                                        "our_products.hospital_management.header"
+                                    )}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="hover:underline">
+                                    {t("our_products.illness_tracker.header")}
                                 </a>
                             </li>
                         </ul>
                     </div>
 
                     <div className="w-full md:w-1/4">
-                        <h5 className="font-semibold mb-2">Services</h5>
+                        <h5 className="font-semibold mb-2"> {t("footer.services")}</h5>
                         <ul>
                             <li>
                                 <a href="#" className="hover:underline">
-                                    Blog Service
+                                    {t(
+                                        "our_services.consultation_and_strategy.header"
+                                    )}
                                 </a>
                             </li>
                             <li>
                                 <a href="#" className="hover:underline">
-                                    Quality
+                                    {t(
+                                        "our_services.software_development.header"
+                                    )}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="hover:underline">
+                                    {t(
+                                        "our_services.maintenance_and_support.header"
+                                    )}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="hover:underline">
+                                    {t("our_services.infrastructure.header")}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="hover:underline">
+                                    {t("our_services.training.header")}
                                 </a>
                             </li>
                         </ul>
                     </div>
 
                     <div className="w-full md:w-1/4">
-                        <h5 className="font-semibold mb-2">Contact</h5>
+                        <h5 className="font-semibold mb-2">{t("contact.header")}</h5>
                         <ul>
                             <li>
                                 <a href="#" className="hover:underline">
-                                    Email: info@servicetech.com
+                                {t("contact.form.email")}: info@servicetech.com
                                 </a>
                             </li>
                             <li>
                                 <a href="#" className="hover:underline">
-                                    Tel: +855 122223344
+                                {t("contact.form.phone")}: +855 96 263 5945
                                 </a>
                             </li>
                         </ul>
