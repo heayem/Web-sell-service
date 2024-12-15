@@ -2,9 +2,9 @@ import React from "react";
 import Layout from "@/Components/Layout/public/Layout";
 import { HeroWithoutContent } from "@/Components/Hero/HeroSection";
 import Footer from "@/Components/Footer/footer";
-import { Heading } from "@/Components/Typography/Heading";
 import { Profile } from "@/Components/Profile/Profile";
 import { Cards } from "@/Components/Cards/Cards";
+import OrganizationalChart from "@/Components/Charts/OrganizationalChart";
 
 let fakeData = {
     teacher: {
@@ -14,58 +14,100 @@ let fakeData = {
         github_link: "#",
         photo: "images/team/teacher.png",
     },
-    projectManager: {
-        name: "Phon Sobon",
-        position: "Product Manager",
-        linkedin_link: "#",
-        github_link: "#",
-        photo: "images/team/sobon.png",
-    },
     team: [
+        {
+            name: "Phon Sobon",
+            position: "Product Manager",
+            linkedin_link: "#",
+            github_link: "#",
+            photo: "images/team/sobon.png",
+            children: [
+                {
+                    name: "Tes Sophanna",
+                    position: "Front-end developer",
+                    linkedin_link: "#",
+                    github_link: "#",
+                    photo: "images/team/phanna.png",
+                },
+                {
+                    name: "Toek Yoteav",
+                    position: "Front-end developer",
+                    linkedin_link: "#",
+                    github_link: "#",
+                    photo: "images/team/teav.png",
+                },
+            ],
+        },
+        {
+            name: "Uth Narin",
+            position: "UXUI Designer",
+            linkedin_link: "#",
+            github_link: "#",
+            photo: "images/team/narin.png",
+        },
         {
             name: "Yem Hea",
             position: "Tech Lead",
             linkedin_link: "#",
             github_link: "#",
             photo: "images/team/hea.png",
-        },
-        {
-            name: "Sok Leaphea",
-            position: "Fullstack Developer",
-            linkedin_link: "#",
-            github_link: "#",
-            photo: "images/team/phea.png",
-        },
-        {
-            name: "Chea Menglim",
-            position: "Data Analyst",
-            linkedin_link: "#",
-            github_link: "#",
-            photo: "images/team/mengLim.png",
-        },
-        {
-            name: "Uth Narin",
-            position: "UX/UI Design",
-            linkedin_link: "#",
-            github_link: "#",
-            photo: "images/team/narin.png",
-        },
-        {
-            name: "Tes Sophanna",
-            position: "Front end developer",
-            linkedin_link: "#",
-            github_link: "#",
-            photo: "images/team/phanna.png",
-        },
-        {
-            name: "Toek Yoteav",
-            position: "Front end developer",
-            linkedin_link: "#",
-            github_link: "#",
-            photo: "images/team/teav.png",
+            children: [
+                {
+                    name: "Sok Leaphea",
+                    position: "Full-stack Developer",
+                    linkedin_link: "#",
+                    github_link: "#",
+                    photo: "images/team/phea.png",
+                },
+                {
+                    name: "Chea Menglim",
+                    position: "Back-end developer",
+                    linkedin_link: "#",
+                    github_link: "#",
+                    photo: "images/team/mengLim.png",
+                },
+            ],
         },
     ],
 };
+
+// Transform fakeData.team into a hierarchical format
+const teamData = fakeData.team.map((member) => ({
+    label: (
+        <Profile
+            name={member.name}
+            position={member.position}
+            linkedin_link={member.linkedin_link}
+            github_link={member.github_link}
+            src={member.photo}
+        />
+    ),
+    children: member.children?.map((child) => ({
+        label: (
+            <Profile
+                name={child.name}
+                position={child.position}
+                linkedin_link={child.linkedin_link}
+                github_link={child.github_link}
+                src={child.photo}
+            />
+        ),
+    })),
+}));
+
+const data = {
+    root: (
+        <Profile
+            name={fakeData.teacher.name}
+            position={fakeData.teacher.position}
+            linkedin_link={fakeData.teacher.linkedin_link}
+            github_link={fakeData.teacher.github_link}
+            src={fakeData.teacher.photo}
+        />
+    ),
+    children: teamData,
+};
+
 export default function AboutUsScreen() {
     return (
         <>
@@ -116,79 +158,15 @@ export default function AboutUsScreen() {
                                 />
                             </div>
                         </div>
-                        <div className=" flex flex-col justify-center items-center gap-8 md:gap-14">
-                            <div className="w-full  flex flex-col justify-center items-center gap-8 md:gap-12">
-                                {fakeData.teacher && (
-                                    <>
-                                        <Heading title="Our Teacher" />
-                                        <Profile
-                                            name={fakeData.teacher.name}
-                                            position={fakeData.teacher.position}
-                                            linkedin_link={
-                                                fakeData.teacher.linkedin_link
-                                            }
-                                            github_link={
-                                                fakeData.teacher.github_link
-                                            }
-                                            src={fakeData.teacher.photo}
-                                        />
-                                    </>
-                                )}
-                            </div>
-                            <div className="w-full  flex flex-col justify-center items-center gap-8 md:gap-12">
-                                {fakeData.projectManager && (
-                                    <>
-                                        <Heading title="Our Team" />
-                                        <Profile
-                                            name={fakeData.projectManager.name}
-                                            position={
-                                                fakeData.projectManager.position
-                                            }
-                                            linkedin_link={
-                                                fakeData.projectManager
-                                                    .linkedin_link
-                                            }
-                                            github_link={
-                                                fakeData.projectManager
-                                                    .github_link
-                                            }
-                                            src={fakeData.projectManager.photo}
-                                        />
-                                    </>
-                                )}
-                            </div>
-                            <div className="w-full  flex flex-col justify-center items-center gap-8 md:gap-12">
-                                {fakeData.team && (
-                                    <>
-                                        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
-                                            {fakeData.team.map(
-                                                (team, index) => (
-                                                    <Profile
-                                                        key={index}
-                                                        name={team.name}
-                                                        position={team.position}
-                                                        linkedin_link={
-                                                            team.linkedin_link
-                                                        }
-                                                        github_link={
-                                                            team.github_link
-                                                        }
-                                                        src={team.photo}
-                                                    />
-                                                )
-                                            )}
-                                        </div>
-                                    </>
-                                )}
-                            </div>
+                        <div className="flex flex-col justify-center items-center gap-8 md:gap-14">
+                            <OrganizationalChart
+                                root={data.root}
+                                data={data.children}
+                            />
                         </div>
                     </div>
                 }
-                footer={
-                    <>
-                        <Footer />
-                    </>
-                }
+                footer={<Footer />}
             />
         </>
     );

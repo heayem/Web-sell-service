@@ -2,6 +2,7 @@ export default {
     translation: {
         nav_menu: {
             home: "Home",
+            product: "Product",
             service: "Service",
             aboutUs: "About",
             contactUs: "Contact Us",
