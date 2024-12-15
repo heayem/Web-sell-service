@@ -7,6 +7,55 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+### Installation
+
+# Set Up Project
+
+# First step
+
+# Clone this project
+
+    git clone git@github.com:heayem/nagafc-admin.git
+
+# Second step
+
+# For Larvel
+
+    use cmd : composer install or composer i
+
+# For Node js
+
+    use cmd: npm install or npm i
+
+# Third step
+
+# For .env
+
+    1. copy .env.example and chnage it to .env
+    2. change DB_DATABASE = root to DB_DATABASE= your database
+    3. cmd : php artisan migrate
+
+# For database
+
+# open xampp or wamp
+
+# For Xampp
+
+    click start Apache and MySQL
+
+# For Wamp
+
+    click wamp icon
+
+# Last step
+
+# run project
+
+# open 2 command
+
+    cmd1 : npm run dev
+    cmd2 : php artisan serve
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -27,7 +76,7 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 
 You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
 ## Laravel Sponsors
 
@@ -64,3 +113,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
