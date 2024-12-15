@@ -15,8 +15,8 @@
 
 # Clone this project
 
-    git clone git@github.com:heayem/nagafc-admin.git
-
+    git clone git@github.com:heayem/Web-sell-service.git
+    
 # Second step
 
 # For Larvel
